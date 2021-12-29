@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block mytitle %} Subscribe  Title {% endblock%}
+
+{% block content %}
+    <!-- <div class="container">
+      {{ error }}
+    </div> -->
+    {% if error %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>{{ error }}</strong> You should check in on some of those fields below.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    {% endif %}
+    <div class="container">
+        <form action="form", method="POST">
+            <div class="mb-3">
+              <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name here", name="name",value="{{ name }}">
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            </div>
+            <div class="mb-3">
+              <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+              <input type="text" class="form-control" id="exampleInputPassword1", placeholder="Enter your password here", name="password", value="{{ password }}">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">Submit</button>
+          </form>
+    </div>    
+{% endblock %}

@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block mytitle %} About Title {% endblock%}
+
+{% block content %}
+      <div class="container">
+        <h1>About the Websites</h1>
+        <p>
+        <ol>
+            {% for name in names %}
+              {% if name == 'Anuj' %}
+              <li>{{ name }} is best</li>
+              {% else %}
+              <li>{{ name }} is good</li>
+              {% endif %}
+            {% endfor %}
+        </ol>
+
+        <ol>
+          {% for one in list3 %}
+          <li>{{ one }}</li>
+          {% endfor %}
+        </ol>
+        </p>
+      </div>
+{% endblock %}
+
+
+
+    

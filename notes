@@ -1,0 +1,13 @@
+flask run command will run the object of flask app which we defined earlier in this files
+this works inside virtual environment only
+outside of it, we have to `export FLASK_APP=app.py`, then flask run will work
+
+Jinja is a modern and a designer friendly templating language for Python, modelled after Django's templates. It is fast, widely used and secure with the optional sandboxed template execution environment.
+It has basic loops and if-else statements
+
+To load the changes automatically,
+export FLASK_ENV=development 
+export FLASK_APP=app.py
+
+url_for takes a method name, it returns page that which's routing is associated with that function.
+So in a way we can make all the mapping changes via controller level only, no need to change the view level.
